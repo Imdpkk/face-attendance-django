@@ -8,16 +8,6 @@
   <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" />
 </p>
 
----
-
-## 📌 Project Banner (Add Your Screenshot Here)
-Replace the placeholder below with a real screenshot of your running project.
-
-
-yaml
-Copy code
-
----
 
 ## 🎯 Overview
 
