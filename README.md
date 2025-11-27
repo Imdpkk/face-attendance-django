@@ -1,92 +1,143 @@
+<h1 align="center">Face Recognition Attendance System (Django)</h1>
 
-
-# Face Recognition Attendance System in Django | Source Code
-
-## Overview
-
-A powerful face recognition-based attendance system built with Django, utilizing deep learning models for secure and accurate face detection and verification. This system includes multi-camera support, real-time attendance logging, and an intuitive dashboard. Ideal for institutions and businesses looking to streamline their attendance tracking system and improve security with biometric verification.
-
----
-
-## Key Features
-
-- **Real-Time Face Recognition:** Integrates MTCNN and InceptionResnetV1 for precise face detection and encoding.
-- **Multi-Camera Support:** Configurable for multiple IP and local cameras.
-- **Automated Attendance Logging:** Supports automated check-in/check-out, reducing the need for manual intervention.
-- **Admin Dashboard:** Access to the student database, attendance records, and customizable settings.
-- **Alert Sound on Successful Recognition:** Plays a sound for successful face recognition using Pygame.
-- **Secure Login and Access:** Restricts admin access to view, edit, and authorize users, ensuring data security.
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.10-blue.svg" />
+  <img src="https://img.shields.io/badge/django-5.2-green.svg" />
+  <img src="https://img.shields.io/badge/opencv-4.x-red.svg" />
+  <img src="https://img.shields.io/badge/facenet--pytorch-2.6-yellow.svg" />
+  <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" />
+</p>
 
 ---
 
-## Installation Guide
+## 📌 Project Banner (Add Your Screenshot Here)
+Replace the placeholder below with a real screenshot of your running project.
 
-To get started with the project, follow the steps below:
 
-### Requirements
-
-The following Python libraries and dependencies are required to run this project:
-
-- Django
-- OpenCV
-- Pygame
-- MTCNN
-- InceptionResnetV1
-
-You can find the complete list of dependencies in the `requirements.txt` file.
-
-### Setup Instructions
-
-1. **Install Dependencies:**
-
-   Run the following command to install the required libraries:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Configure the System:**
-
-   - Set up your camera devices (IP or local) and configure them in the settings file.
-   - Ensure your server is set up to handle real-time face recognition processing.
-
-3. **Run the Server:**
-
-   After completing the configuration, start the Django development server:
-
-   ```bash
-   python manage.py runserver
-   ```
-
-4. **Access the Dashboard:**
-
-   Once the server is running, access the dashboard at `http://127.0.0.1:8000/` and log in with your admin credentials.
-
-5. **Admin Setup:**
-
-   Create user profiles for each individual (students/employees) and assign them roles as required.
+yaml
+Copy code
 
 ---
 
-## **Paid Version (v2)**
+## 🎯 Overview
 
-For access to the **Paid Version v2**, which includes advanced features like custom user roles, data export capabilities, and optimized performance for larger deployments, click below:
+This is a **real-time Face Recognition Attendance System** built using **Django**, **OpenCV**, and **FaceNet (MTCNN + InceptionResnetV1)**.
 
-[Download Paid Version v2 Source Code](https://apycoder.com/product/face-based-student-attendance-system-version-2-0/#google_vignette)
+It captures live video, detects faces, compares embeddings, and automatically logs **Check-In / Check-Out** attendance.  
+This project is suitable for:
+
+- Colleges & Universities  
+- Offices & Companies  
+- Security Access Systems  
+- Labs & Research Centres  
 
 ---
 
-## License and Pricing
+## 🚀 Features
 
-The Paid Version v3 of the Face Recognition Attendance System offers a range of features designed for scalability and enhanced security. For more details on pricing or to purchase a license, please visit [your website link] or contact us directly.
+### 🧠 Face Recognition
+- MTCNN for face detection  
+- FaceNet for generating embeddings  
+- Works with webcam or IP camera  
+
+### 📸 Student Image Capture
+- Capture multiple face images  
+- Clean folder management  
+- Automatic face encoding  
+
+### 📊 Attendance Automation
+- Auto Check-In / Check-Out  
+- Stores history in SQLite  
+- User-friendly admin dashboard  
+
+### 🔊 Sound Notifications
+- Plays a success sound using **pygame**  
+
+### 🔐 Admin Controls
+- Add/delete students  
+- Approve or authorize users  
+- View detailed attendance  
 
 ---
 
-## Support
+## 🛠 Tech Stack
 
-For any questions or support, feel free to reach out to us through:
+| Technology | Purpose |
+|-----------|----------|
+| **Python 3.10** | Backend logic |
+| **Django 5.x** | Web framework |
+| **OpenCV** | Camera & face capture |
+| **Facenet-Pytorch** | Face embeddings |
+| **SQLite** | Default database |
+| **Pygame** | Sound alerts |
 
-- Email: info@apycoder.com
-- Phone: +91-9525845873
-- Website: www.apycoder.com
+---
 
+## 📥 Installation Guide
+
+### 1️⃣ Clone the Project
+```bash
+git clone https://github.com/Imdpkk/face-attendance-django.git
+cd face-attendance-django
+2️⃣ Create & Activate Virtual Environment
+bash
+Copy code
+python -m venv venv
+venv\Scripts\activate
+3️⃣ Install Dependencies
+bash
+Copy code
+pip install -r requirements.txt
+4️⃣ Apply Migrations
+bash
+Copy code
+python manage.py migrate
+5️⃣ Start Server
+bash
+Copy code
+python manage.py runserver
+6️⃣ Open in Browser
+👉 http://127.0.0.1:8000/
+
+☁️ Cloud & DevOps Improvements (Future Scope)
+These will make your project Cloud-ready and perfect for your AWS & DevOps resume.
+
+🟦 1. AWS S3
+Store student images + embeddings securely.
+
+🟩 2. AWS EC2
+Host the Django project.
+
+🟨 3. AWS RDS
+Move database from SQLite → PostgreSQL.
+
+🟥 4. AWS Lambda
+Automate embedding generation.
+
+🔵 5. GitHub Actions (CI/CD)
+Auto deploy to EC2 on push.
+
+🟪 6. Docker Support
+Containerize the entire application.
+
+🔮 Future Enhancements
+Mask detection
+
+QR + Face hybrid attendance
+
+Mobile App API
+
+Admin analytics dashboard
+
+OTP/Email alerts
+
+Nginx + Gunicorn deployment
+
+🧑‍💻 Author
+Deepak Vishwakarma
+
+GitHub: https://github.com/Imdpkk
+
+LinkedIn: https://www.linkedin.com/in/deepak-vishwakarma-846ba1269/
+
+Email: deepvishwakarma.2114@gmail.com
